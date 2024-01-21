@@ -1,0 +1,23 @@
+<div class="container">
+  <h3>Stock History</h3>
+  <p>Symbol: {{ stockSymbol }}</p>
+
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Date</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let historyItem of stockHistoryList; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ historyItem.timestamp  }}</td>
+          <td>{{ historyItem.price  }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

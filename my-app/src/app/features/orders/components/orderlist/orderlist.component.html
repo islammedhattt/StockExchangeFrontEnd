@@ -1,0 +1,33 @@
+<main class="container market p-4">
+  <div class="row mb-3">
+    <div class="col-md-8">
+      <h2>Current Orders</h2>
+    </div>
+    <div class="col-md-4 text-md-end">
+      <button class="btn btn-success" (click)="openAddNewOrder()">
+        <i class="bi bi-plus-circle-fill"></i> Add New Order
+      </button>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Stock Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of orders; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ item.symbol }}</td>
+          <td>{{ item.price | number }}</td>
+          <td>{{ item.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

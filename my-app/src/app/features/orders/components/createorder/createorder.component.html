@@ -1,0 +1,17 @@
+<div class="add-new-order p-2">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Create Order</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+  </div>
+
+  <div class="form-group row m-0 p-0 pt-3">
+    
+    <div class="col-12">
+      <stock [canOrder]="true"></stock>
+    </div>
+
+    <div class="col-12 text-end pt-2">
+      <button class="btn btn-light m-2" (click)="activeModal.close()">Close</button>
+    </div>
+  </div>
+</div>
